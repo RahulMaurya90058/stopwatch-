@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Stopwatch</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .time-box {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease;
+      width: 320px;
+    }
+
+    .time-box:hover {
+      transform: scale(1.03);
+    }
+
+    .time-box h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #6ee7b7, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    button {
+      flex: 1;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    button:active {
+      transform: translateY(1px);
+    }
+
+    button:nth-child(1) {
+      background: linear-gradient(90deg, #34d399, #10b981);
+      color: #fff;
+    }
+
+    button:nth-child(2) {
+      background: linear-gradient(90deg, #f87171, #ef4444);
+      color: #fff;
+    }
+
+    button:nth-child(3) {
+      background: linear-gradient(90deg, #60a5fa, #3b82f6);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="time-box">
+      <h1 class="time">00:00:00</h1>
+      <div class="btn-group">
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="reset()">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
